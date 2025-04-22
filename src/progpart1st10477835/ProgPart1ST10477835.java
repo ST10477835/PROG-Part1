@@ -9,9 +9,6 @@ import java.util.Scanner;
  * @author abule
  */
 public class ProgPart1ST10477835 {
-    
-    
-    
     /**
      * @param args the command line arguments
      */
@@ -33,23 +30,24 @@ public static String userName;
     
     public static boolean checkUserName(String userName){
         return userName.length()<=5 && userName.contains("_");
-    }//The method checks if the given username is at most 5 characters long and contains at least one underscore
+    }//The method checks if the given username is at most 5 characters long and contains at least one underscore.
     public static boolean checkPasswordComplexity(String password){
         if(password.length()>=8){
             return password.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[^a-zA-Z0-9]).+$");
         }else{
             return false;
         }
-    }//The method first checks if the password is atleast 8 characters long then checks if the password contains atleast one capital letter, one digit and one special character
+    }//The method first checks if the password is atleast 8 characters long then checks if the password contains atleast one capital letter, one digit and one special character.
     public static boolean checkCellPhoneNumber(String phoneNumber){
         return phoneNumber.matches("^(\\+27|0)\\d{9}$");
-    }//The method makes sure that the cellphone number starts with the international countrey code and is the correct length
+    }//The method makes sure that the cellphone number starts with the international countrey code and is the correct length.
     public static String registerUser(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Please enter a first name: ");
         firstName = scanner.next();
         System.out.print("Please enter a last name: ");
         lastName = scanner.next();
+        //collecting the users first name and last name.
         
         System.out.print("Please enter a username: ");
         userName = scanner.next();
@@ -111,3 +109,4 @@ public static String userName;
         return (loginStatus) ? "A successful login" : "A failed login";
     }//return the login status. If the login was successful will return successful and if failed will return failed.
 }
+//OpenAI. (2025). ChatGPT (April 20 version) [Large language model]. https://chatgpt.com/share/68073ac1-d4ac-8006-a670-5ac849645342
